@@ -1,0 +1,23 @@
+.fromTopIn {
+  transition: transform 1s ease, opacity 1s ease;
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.fromTopOut {
+  transition: transform 1s ease, opacity 1s ease;
+  transform: translate(0, -10px);
+  opacity: 0;
+}
+
+.fromBottomIn {
+  transition: transform 1s ease, opacity 1s ease;
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.fromBottomOut {
+  transition: transform 1s ease, opacity 1s ease;
+  transform: translate(0, 10px);
+  opacity: 0;
+}

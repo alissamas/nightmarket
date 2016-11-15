@@ -1,0 +1,368 @@
+body {
+  margin: 0;
+}
+
+.upcoming {
+  background-color: #f9d0e2;
+  position: relative;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    padding: 6%;
+    padding-bottom: 10%;
+    width: 75%;
+  }
+
+  h2 {
+    @include cta-style;
+
+    color: white;
+    position: absolute;
+    font-size: 2.5rem;
+    top: 40%;
+    left: 50%;
+    margin: 0;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
+  a {
+    @include cta-style;
+    @include button;
+
+    position: absolute;
+    font-size: 1rem;
+    color: white;
+    width: 160px;
+    top: 55%;
+    left: 50%;
+    margin: 0;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+  }
+
+  .cloud-1 {
+    z-index: 100;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    width: 150%;
+    padding: 0;
+  }
+}
+
+.vendors {
+  display: flex;
+  justify-content: center;
+  margin: 40px 20%;
+
+  .featured-vendor {
+    display: block;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 1%;
+
+    img {
+      position: relative;
+      display: block;
+      width: 100%;
+    }
+
+    h3 {
+      @include cta-style;
+      @include vendor-text;
+
+      color: white;
+    }
+  }
+
+  .become-a-vendor {
+    display: block;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 1%;
+
+    img {
+      position: relative;
+      display: block;
+      width: 100%;
+    }
+
+    h3 {
+      @include cta-style;
+      @include vendor-text;
+
+      color: white;
+    }
+
+    a {
+      @include cta-style;
+      @include vendor-text;
+      @include button2;
+
+      top: 65%;
+      font-size: 0.8rem;
+      width: 150px;
+    }
+  }
+}
+
+.section-header {
+  @include cta-style;
+
+  font-size: 2.2rem;
+  position: relative;
+  text-align: center;
+  z-index: 1000;
+}
+
+.sprinkles {
+  position: absolute;
+  right: -150px;
+  transform: rotate(45deg);
+}
+
+.insta {
+  background-color: $brown;
+  margin-top: 100px;
+  padding: 50px 200px;
+  padding-bottom: 100px;
+
+  .invisible {
+    transition: opacity 0.5s ease;
+    opacity: 0;
+  }
+
+  .visible {
+    transition: opacity 0.5s ease;
+    opacity: 1;
+  }
+
+  h2 {
+    color: white;
+    text-transform: lowercase;
+  }
+
+  .insta-feed {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 23%;
+      height: 100%;
+    }
+  }
+}
+
+.mailing-list {
+  padding-top: 30px;
+  position: relative;
+
+  .cloud-2 {
+    position: absolute;
+    z-index: -99;
+    top: 0;
+    width: 100%;
+  }
+
+  h2 {
+    color: white;
+  }
+
+  .sign-up {
+    display: flex;
+    justify-content: center;
+
+    input {
+      @include cta-style;
+
+      font-style: italic;
+      color: #999;
+      background-color: white;
+      height: 50px;
+      display: block;
+      padding: 0;
+      width: 300px;
+      text-align: center;
+    }
+
+    a {
+      @include cta-style;
+      @include button;
+
+      display: inline-block;
+      padding: 15px 16px;
+      height: 50px;
+      margin: 0 2%;
+    }
+  }
+}
+
+.map {
+  img {
+    position: relative;
+    z-index: -999;
+    width: 100%;
+    transition: transform 0.8s ease-in-out;
+
+    &:hover {
+      transform: rotate(7deg);
+      transition: transform 0.8s ease-in-out;
+    }
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .upcoming {
+    h2 {
+      font-size: 2rem;
+      line-height: 2.8rem;
+      padding-bottom: 10px;
+    }
+
+    .button {
+      font-size: 0.8em;
+      padding: 10px 12px;
+    }
+  }
+
+  .vendors {
+    .featured-vendor {
+      h3 {
+        font-size: 1.4rem;
+      }
+    }
+
+    .become-a-vendor {
+      h3 {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .insta {
+    padding: 50px 16%;
+
+    .insta-feed {
+      flex-direction: column;
+
+      img {
+        width: 100%;
+      }
+
+      .hide-4-mobile {
+        display: none;
+      }
+    }
+  }
+
+  .mailing-list {
+    background-color: $lightblue;
+    padding-top: 30px;
+
+    .cloud-2 {
+      top: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .vendors {
+    flex-direction: column;
+    margin: 40px 16%;
+
+    .featured-vendor {
+      h3 {
+        font-size: 1.8rem;
+      }
+    }
+
+    .become-a-vendor {
+      h3 {
+        font-size: 1.8rem;
+        top: 45%;
+      }
+
+      a {
+        top: 70%;
+      }
+    }
+  }
+
+  .mailing-list {
+    padding-top: 30px;
+
+    .cloud-2 {
+      top: 120px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .upcoming {
+    padding-top: 40px;
+
+    h2 {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      padding-bottom: 5px;
+      margin: 0;
+      top: 45%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+
+    img {
+      width: 85%;
+    }
+
+    .button {
+      font-size: 0.8em;
+      padding: 8px 0;
+      width: 140px;
+      top: 65%;
+    }
+
+    .cloud-1 {
+      bottom: -5%;
+    }
+  }
+
+  .vendors {
+    .featured-vendor {
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .become-a-vendor {
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .section-header {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  .sign-up {
+    width: 90%;
+    margin: 0 auto;
+
+    input {
+      width: 200px;
+    }
+  }
+
+  .map {
+    img {
+      width: 150%;
+    }
+  }
+}

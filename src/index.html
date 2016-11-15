@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HNL NIGHT MARKET</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <nav>
+      <div class="mobile-nav">
+        <a href="index.html"><img src="/images/logo-small.png"></a>
+        <a class="nav-toggle" href="#"></a>
+        <ul class="mobile-toggle">
+          <li><a href="eventdetail.html">up next</a></li>
+          <li><a href="pastevents.html">past events</a></li>
+          <li><a href="#">our team</a></li>
+          <li><a href="#">community</a></li>
+          <li><a href="#">news + updates</a></li>
+        </ul>
+      </div>
+      <div class="nav-top">
+        <a href="index.html"><img src="/images/logo-white.png"></a>
+      </div>
+
+      <div class="nav-bottom">
+        <ul>
+          <li><a href="eventdetail.html">up next</a></li>
+          <li><a href="pastevents.html">past events</a></li>
+          <li><a href="#">our team</a></li>
+          <li><a href="#">community</a></li>
+          <li><a href="#">news + updates</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="header-home">
+      <img class="moon" src="/images/moon.png">
+      <img class="banana" src="/images/banana.png">
+      <img class="bird" src="/images/bird.png">
+      <img class="cloud3" src="/images/cloud3.png">
+      <h1 data-scroll="toggle(.fromBottomIn, .fromBottomOut)">welcome to<br>night market</h1>
+      <a href="eventdetail.html" class="button">learn more</a>
+    </header>
+
+    <main>
+      <section class="upcoming">
+        <img src="/images/up-next.jpg">
+        <h2 data-scroll="toggle(.fromTopIn, .fromTopOut)" >up next:<br>#powwowhawaii</h2>
+        <a data-scroll="toggle(.fromBottomIn, .fromBottomOut)" href="#" class="button">learn more</a>
+        <img class="cloud-1" src="src/images/cloud.png">
+      </section>
+
+      <h2 data-scroll="toggle(.fromBottomIn, .fromBottomOut)" class="section-header">vendor spotlight</h2>
+      <img class="sprinkles" src="/images/sprinkles.png">
+      <section class="vendors">
+        <div class="featured-vendor">
+          <img src="/images/echo.jpg">
+          <h3>echo &amp; atlas</h3>
+        </div>
+        <div class="become-a-vendor">
+          <img src="/images/becomeavendor.jpg">
+          <h3>become a vendor</h3>
+          <a href="#" class="button">apply now</a>
+        </div>
+      </section>
+
+      <section class="insta">
+        <h2 data-scroll="toggle(.fromBottomIn, .fromBottomOut)" class="section-header">@hnlnightmarket</h2>
+        <div class="insta-feed">
+          <img src="/images/insta1.png">
+          <img class="hide-4-mobile" src="/images/insta2.png">
+          <img class="hide-4-mobile" src="/images/insta3.png">
+          <img class="hide-4-mobile" src="/images/insta4.png">
+        </div>
+      </section>
+
+      <section class="mailing-list">
+        <h2 data-scroll="toggle(.fromBottomIn, .fromBottomOut)" class="section-header">stay updated</h2>
+        <img class="cloud-2" src="/images/cloud2.png">
+        <div class="sign-up">
+          <input type="text" name="fname" id="fname" placeholder="email address">
+          <a href="#" class="button">submit</a>
+        </div>
+      </section>
+
+      <section class="map">
+        <img src="/images/map.png">
+      </section>
+    </main>
+
+    <footer>
+      <h6><a href="http://www.saltatkakaako.com/" target="_blank">salt</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.google.com/maps/dir/685+Auahi+St+Honolulu+HI+96813/21.298249,-157.860912" target="blank">685 auahi st</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="mailto:info@streetgrindz.com">info@streetgrindz.com</a>
+      </h6>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/HonoluluNightMarket/" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/hnlnightmarket" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+      <a href="https://www.instagram.com/hnlnightmarket/" target="_blank"> <i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+      </div>
+    </footer>
+  </body>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="/src/ScrollTrigger.min.js"></script>
+  <script>
+  window.counter = function() {
+  	// this refers to the html element with the data-scroll-showCallback tag
+  	var span = this.querySelector('span');
+  	var current = parseInt(span.textContent);
+
+  	span.textContent = current + 1;
+  };
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var trigger = new ScrollTrigger({
+  	  addHeight: true
+    });
+  });
+  </script>
+  <script src="/src/scripts.js"></script>
+</html>

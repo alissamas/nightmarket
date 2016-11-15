@@ -1,0 +1,31 @@
+footer {
+  text-align: center;
+  background-color: #999;
+  margin: 0;
+  height: 250px;
+
+  h6 {
+    font-family: $default-font;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .social-icons i {
+    color: white;
+    margin: 0 10px;
+  }
+}
