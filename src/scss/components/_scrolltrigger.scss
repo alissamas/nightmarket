@@ -21,3 +21,27 @@
   transform: translate(0, 10px);
   opacity: 0;
 }
+
+.fromLeftOut {
+  transition: transform 5s ease, opacity 2s ease;
+  transform: translate(-50px, 0) rotate(-5deg);
+  opacity: 1;
+}
+
+.fromLeftIn {
+  transition: transform 1s ease, opacity 2s ease;
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.fromRightIn {
+  transition: transform 5s ease, opacity 2s ease;
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.fromRightOut {
+  transition: transform 5s ease, opacity 2s ease;
+  transform: translate(120px, 0);
+  opacity: 0;
+}

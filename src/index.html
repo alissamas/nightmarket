@@ -36,17 +36,20 @@
       </div>
     </nav>
 
-    <header class="header-home">
-      <img class="moon" src="/images/moon.png">
-      <img class="banana" src="/images/banana.png">
-      <img class="bird" src="/images/bird.png">
+    <header class="home-header">
+      <img data-scroll="toggle(.fromRightIn, .fromRightOut)" class="moon" src="/images/moon.png">
+      <img data-scroll="toggle(.fromLeftIn, .fromLeftOut)" class="banana" src="/images/banana.png">
+      <img class="leaf1" src="/images/leaf.png">
+      <img data-scroll="toggle(.fromLeftOut, .fromLeftIn)" class="bird" src="/images/bird.png">
+      <img class="leaf2" src="/images/leaf.png">
+      <img class="banana2" src="/images/banana.png">
       <img class="cloud3" src="/images/cloud3.png">
       <h1 data-scroll="toggle(.fromBottomIn, .fromBottomOut)">welcome to<br>night market</h1>
       <a href="eventdetail.html" class="button">learn more</a>
     </header>
 
     <main>
-      <section class="upcoming">
+      <section id="upcoming" class="upcoming">
         <img src="/images/up-next.jpg">
         <h2 data-scroll="toggle(.fromTopIn, .fromTopOut)" >up next:<br>#powwowhawaii</h2>
         <a data-scroll="toggle(.fromBottomIn, .fromBottomOut)" href="#" class="button">learn more</a>
@@ -55,7 +58,7 @@
 
       <h2 data-scroll="toggle(.fromBottomIn, .fromBottomOut)" class="section-header">vendor spotlight</h2>
       <img class="sprinkles" src="/images/sprinkles.png">
-      <section class="vendors">
+      <section id="vendors" class="vendors">
         <div class="featured-vendor">
           <img src="/images/echo.jpg">
           <h3>echo &amp; atlas</h3>
@@ -67,7 +70,7 @@
         </div>
       </section>
 
-      <section class="insta">
+      <section id="insta" class="insta">
         <h2 data-scroll="toggle(.fromBottomIn, .fromBottomOut)" class="section-header">@hnlnightmarket</h2>
         <div class="insta-feed">
           <img src="/images/insta1.png">
@@ -111,16 +114,17 @@
   <script src="/src/ScrollTrigger.min.js"></script>
   <script>
   window.counter = function() {
-  	// this refers to the html element with the data-scroll-showCallback tag
-  	var span = this.querySelector('span');
-  	var current = parseInt(span.textContent);
+    // this refers to the html element with the data-scroll-showCallback tag
+    var span = this.querySelector('span');
+    var current = parseInt(span.textContent);
 
-  	span.textContent = current + 1;
+    span.textContent = current + 1;
+    event.preventDefault();
   };
 
   document.addEventListener('DOMContentLoaded', function(){
     var trigger = new ScrollTrigger({
-  	  addHeight: true
+      addHeight: true
     });
   });
   </script>
