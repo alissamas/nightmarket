@@ -1,6 +1,6 @@
 header {
-  height: 600px;
-  background-color: #999;
+  height: 550px;
+  position: relative;
 
   h1 {
     @include cta-style;
@@ -9,7 +9,8 @@ header {
     color: white;
     font-weight: 400;
     text-align: center;
-    font-size: 4em;
+    font-size: 4.5rem;
+    letter-spacing: 1px;
     padding-top: 150px;
     padding-bottom: 0;
     margin: 0 auto;
@@ -18,41 +19,100 @@ header {
   .button {
     @include cta-style;
     @include button;
+
+    z-index: 999;
   }
 }
 
 .moon {
   position: absolute;
-  right: -120px;
-  top: 160px;
+  width: 600px;
+  right: -150px;
+  top: 50px;
+  transition: all 1s ease;
 }
 
 .bird {
   position: absolute;
-  width: 250px;
+  width: 300px;
   left: -40px;
-  bottom: 0;
+  bottom: -90px;
+  z-index: 3;
+  transition: all 1s ease;
 }
 
 .banana {
   position: absolute;
   width: 350px;
-  left: -70px;
+  left: -60px;
   bottom: 150px;
-  transform: rotate(-10deg);
+  transition: all 1s ease;
+}
+
+.leaf1 {
+  position: absolute;
+  width: 320px;
+  left: -100px;
+  top: 230px;
+  transform: rotate(170deg);
+  z-index: 2;
+  transition: all 1s ease;
+}
+
+.leaf2 {
+  position: absolute;
+  width: 300px;
+  right: -60px;
+  bottom: 70px;
+  transform: rotate(40deg);
+  z-index: 4;
+  transition: all 1s ease;
+}
+
+.banana2 {
+  position: absolute;
+  transform: rotate(-80deg);
+  width: 350px;
+  right: -90px;
+  bottom: -120px;
+  z-index: 5;
+  transition: all 1s ease;
 }
 
 .cloud3 {
   position: absolute;
   bottom: 0;
   width: 100%;
+  opacity: 0.6;
 }
 
-.header-home {
-  background-color: $blue;
+.home-header {
+  background: $blue;
 }
 
-@media only screen and (max-width: 750px) {
+.pastevents-header {
+  background: $brown;
+}
+
+@media only screen and (max-width: 940px) {
+  .moon {
+    right: -270px;
+  }
+
+  .leaf2 {
+    right: -150px;
+  }
+
+  .leaf1 {
+    left: -180px;
+  }
+
+  .bird {
+    left: -100px;
+  }
+}
+
+@media only screen and (max-width: 782px) {
   header {
     height: 400px;
 
@@ -60,6 +120,26 @@ header {
       font-size: 3em;
       padding-top: 120px;
     }
+  }
+
+  .moon {
+    width: 500px;
+    right: -200px;
+    top: 30px;
+  }
+
+  .leaf2 {
+    width: 250px;
+    right: -100px;
+  }
+
+  .banana {
+    left: -200px;
+  }
+
+  .banana2 {
+    right: -200px;
+    transform: rotate(-95deg);
   }
 }
 
@@ -75,5 +155,29 @@ header {
       padding: 10px 12px;
       width: 160px;
     }
+  }
+
+  .moon {
+    right: -250px;
+  }
+
+  .leaf2 {
+    right: -250px;
+  }
+
+  .banana2 {
+    right: -270px;
+  }
+
+  .leaf1 {
+    left: -200px;
+  }
+
+  .banana {
+    left: -300px;
+  }
+
+  .bird {
+    left: -240px;
   }
 }

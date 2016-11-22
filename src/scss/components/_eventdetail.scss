@@ -1,14 +1,18 @@
+.header-eventdetail {
+  background-color: $darkpink;
+}
+
 .eat {
   position: relative;
   padding: 5% 8%;
   padding-bottom: 100px;
 
-  .leaf {
+  .spam {
     position: absolute;
-    width: 30%;
-    top: 100px;
-    right: -100px;
-    transition: transform ease-in-out 2s;
+    width: 40%;
+    top: 130px;
+    right: -200px;
+    z-index: 999;
   }
 
   .eat-list {
@@ -26,10 +30,10 @@
         a {
           text-decoration: none;
           color: $blue;
-          transition: all 0.5s;
+          transition: all 0.4s;
 
           &:hover {
-            padding-left: 8px;
+            padding-left: 10px;
           }
         }
       }
@@ -47,7 +51,7 @@
 
 .shop {
   position: relative;
-  background-color: $blue;
+  background-color: $brown;
   padding: 5% 8%;
   padding-top: 2%;
   padding-bottom: 100px;
@@ -56,11 +60,19 @@
     color: white;
   }
 
+  .glasses {
+    position: absolute;
+    transform: rotateY(180deg);
+    left: -200px;
+    width: 40%;
+    z-index: 20;
+  }
+
   .cloud {
     position: absolute;
-    width: 120%;
-    transform: rotate(180deg);
-    top: -200px;
+    width: 130%;
+    transform: rotate(182deg);
+    top: -170px;
     right: 0;
     z-index: -99;
   }
@@ -71,7 +83,7 @@
     transform: rotate(-30deg);
     left: -180px;
     top: 150px;
-    z-index: 99;
+    z-index: 10;
   }
 
   .shop-list {
@@ -89,10 +101,10 @@
         a {
           text-decoration: none;
           color: white;
-          transition: all 0.5s;
+          transition: all 0.4s;
 
           &:hover {
-            padding-left: 8px;
+            padding-left: 10px;
           }
         }
       }
@@ -113,17 +125,28 @@
   padding-bottom: 100px;
   position: relative;
 
-  .leaf-2 {
+  .shoes {
     position: absolute;
     z-index: 100;
-    left: -120px;
+    right: -120px;
     top: -20px;
-    width: 30%;
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    transition: transform ease-in-out 2s;
+    width: 40%;
+  }
+
+  .banana3 {
+    position: absolute;
+    right: -70px;
+    width: 350px;
+    transform: rotate(-80deg);
+    top: -120px;
+  }
+
+  .banana4 {
+    position: absolute;
+    right: -50px;
+    width: 350px;
+    transform: rotate(-90deg);
+    top: -30px;
   }
 
   .lineup {

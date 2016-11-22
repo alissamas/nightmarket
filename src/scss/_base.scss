@@ -1,6 +1,8 @@
-$blue: #1e4254;
+$blue: #173341;
 $brown: #c07c19;
 $lightblue: #5893cd;
+$darkpink: #ff8189;
+$lightpink: #f9d0e2;
 $default-font: 'Montserrat', sans-serif;
 
 @mixin cta-style {
@@ -12,7 +14,7 @@ $default-font: 'Montserrat', sans-serif;
 
 @mixin button {
   display: block;
-  background-color: #ff8189;
+  background-color: $darkpink;
   padding: 12px 20px;
   width: 200px;
   border-radius: 20px 20px 0;

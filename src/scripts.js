@@ -2,7 +2,7 @@
 var $navToggle = $('.nav-toggle');
 var $mainNavUl = $('.mobile-toggle');
 var $window = $(window);
-var mobileBreakpoint = 750;
+var mobileBreakpoint = 780;
 
 $navToggle.on('click', function() {
   $mainNavUl.slideToggle();
@@ -17,19 +17,11 @@ $window.on('resize', function() {
 });
 
 // leaf movement
-$(".leaf").mouseover(function(){
+$(".leaf1 .leaf2").mouseover(function(){
     $(".leaf").css("transform", "rotate(3deg)");
 });
 
-$(".leaf").mouseout(function(){
-    $(".leaf").css("transform", "rotate(-3deg)");
-});
-
-$(".leaf-2").mouseover(function(){
-    $(".leaf").css("transform", "rotate(3deg)");
-});
-
-$(".leaf-2").mouseout(function(){
+$(".leaf1, .leaf2").mouseout(function(){
     $(".leaf").css("transform", "rotate(-3deg)");
 });
 
@@ -50,16 +42,27 @@ $(document).ready(function () {
 });
 
 // ScrollTrigger
-window.counter = function() {
+$(document).ready(function () {
+  window.counter = function() {
   // this refers to the html element with the data-scroll-showCallback tag
-  var span = this.querySelector('span');
-  var current = parseInt(span.textContent);
+    var span = this.querySelector('span');
+    var current = parseInt(span.textContent);
 
-  span.textContent = current + 1;
-};
+    span.textContent = current + 1;
+  };
 
-document.addEventListener('DOMContentLoaded', function(){
-  var trigger = new ScrollTrigger({
-    addHeight: true
+  document.addEventListener('DOMContentLoaded', function(){
+    var trigger = new ScrollTrigger({
+      addHeight: true
+    });
   });
+});
+
+// scroll to div
+var element_to_scroll_to = $('#upcoming')[0];
+element_to_scroll_to.scrollIntoView();
+
+
+document.querySelector('#upcoming').scrollIntoView({
+  behavior: 'smooth'
 });
