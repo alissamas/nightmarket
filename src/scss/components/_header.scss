@@ -71,7 +71,7 @@ header {
 
 .banana2 {
   position: absolute;
-  transform: rotate(-80deg);
+  transform: rotate(-90deg);
   width: 350px;
   right: -90px;
   bottom: -120px;
@@ -114,6 +114,15 @@ header {
   .bird {
     left: -100px;
   }
+
+  .banana {
+    transform: rotate(-5deg);
+    left: -160px;
+  }
+
+  .banana2 {
+    transform: rotate(-85deg);
+  }
 }
 
 @media only screen and (max-width: 782px) {
@@ -136,6 +145,7 @@ header {
     width: 250px;
     right: -100px;
   }
+
   .leaf1 {
     width: 250px;
   }
@@ -170,7 +180,8 @@ header {
   }
 
   .moon {
-    right: -250px;
+    right: -200px;
+    width: 450px;
   }
 
   .leaf2 {
