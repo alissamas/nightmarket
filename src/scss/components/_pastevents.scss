@@ -3,12 +3,11 @@ header {
 }
 
 .past-event-gallery {
-  width: 100%;
-  margin: 0 auto;
+  width: 60%;
+  display: block;
+  margin: 50px auto;
   margin-bottom: 50px;
   z-index: 999;
-  clear: both;
-  height: auto;
 
   ul {
     margin-left: 0;
@@ -30,13 +29,21 @@ header {
   }
 }
 
-.load-more {
-  @include cta-style;
-
+.more {
   display: block;
-  margin: 50px auto;
-  text-align: center;
-  color: black;
+  clear: both;
+  width: 100%;
+  margin: 20px 0;
+
+  .load-more {
+    @include cta-style;
+
+    display: block;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    color: black;
+  }
 }
 
 .mailing-list {

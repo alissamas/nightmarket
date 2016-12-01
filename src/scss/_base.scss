@@ -1,9 +1,28 @@
-$blue: #173341;
+$blue: #1b4251;
 $brown: #c07c19;
 $lightblue: #5893cd;
 $darkpink: #ff8189;
 $lightpink: #f9d0e2;
-$default-font: 'Montserrat', sans-serif;
+$grey: #f4eaea;
+$default-font: 'Gotham', sans-serif;
+
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 400;
+  src: url("src/Gotham-Book.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 700;
+  src: url("src/Gotham-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 300;
+  src: url("src/Gotham-Light.otf") format("opentype");
+}
 
 @mixin cta-style {
   font-family: $default-font;
