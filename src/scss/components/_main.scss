@@ -246,17 +246,14 @@ body {
   }
 
   .insta {
-    padding: 50px 16%;
+    padding: 50px 20%;
 
     .insta-feed {
-      flex-direction: column;
+      flex-direction: row;
+      flex-wrap: wrap;
 
       img {
-        width: 100%;
-      }
-
-      .hide-4-mobile {
-        display: none;
+        width: 49%;
       }
     }
   }
