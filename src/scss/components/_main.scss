@@ -204,8 +204,12 @@ body {
 }
 
 .map {
+  margin: 0;
+  padding: 0;
+
   img {
     position: relative;
+    margin-bottom: -5px;
     z-index: -999;
     width: 100%;
     transition: transform 0.8s ease-in-out;

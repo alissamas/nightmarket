@@ -71,7 +71,7 @@ header {
 
 .banana2 {
   position: absolute;
-  transform: rotate(-90deg);
+  transform: rotate(-100deg);
   width: 350px;
   right: -90px;
   bottom: -120px;
@@ -108,7 +108,7 @@ header {
   }
 
   .leaf1 {
-    left: -180px;
+    left: -100px;
   }
 
   .bird {
@@ -185,22 +185,24 @@ header {
   }
 
   .leaf2 {
-    right: -250px;
+    right: -160px;
+    bottom: 0;
   }
 
   .banana2 {
     right: -270px;
+    bottom: -200px;
   }
 
   .leaf1 {
-    left: -200px;
+    left: -150px;
   }
 
   .banana {
-    left: -300px;
+    left: -280px;
   }
 
   .bird {
-    left: -240px;
+    left: -210px;
   }
 }
