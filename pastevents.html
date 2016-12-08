@@ -39,34 +39,35 @@
         </nav>
 
         <header class="pastevents-header">
-          <img class="moon" src="/images/moon.png">
-          <img class="banana" src="/images/banana.png">
-          <img class="bird" src="/images/bird.png">
+          <img data-scroll="toggle(.fromRightIn, .fromRightOut)" class="moon" src="/images/moon.png">
+          <img data-scroll="toggle(.fromLeftIn, .fromLeftOut)" class="banana" src="/images/banana.png">
+          <img class="leaf1" src="/images/leaf.png">
+          <img data-scroll="toggle(.fromLeftOut, .fromLeftIn)" class="bird" src="/images/bird.png">
+          <img class="leaf2" src="/images/leaf.png">
+          <img class="banana2" src="/images/banana.png">
           <img class="cloud3" src="/images/cloud3.png">
           <h1 data-scroll="toggle(.fromBottomIn, .fromBottomOut)">past events</h1>
         </header>
 
         <main>
           <section class="past-event-gallery">
-            <ul>
-              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
-              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
-              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
-              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
-              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
-              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
-              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
-              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
-              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
-              <li data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/placeholder_large.png"></li>
-            </ul>
+            <div class="gallery-wrapper">
+              <div data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/pastevent1.png"></div>
+              <div data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img class="pasteventname" src="/images/becomeavendor.jpg"><h3>obake</h3></div>
+              <div data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img class="pasteventname" src="/images/becomeavendor.jpg"><h3>dog days of summer</h3></div>
+              <div data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/pastevent2.png"></div>
+              <div data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img src="/images/pastevent3.png"></div>
+              <div data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><img class="pasteventname" src="/images/becomeavendor.jpg"><h3>summer solstice</h3></div>
+            </div>
           </section>
-          <div class="more"><a class="load-more" href="#">load more</a></div>
+          <div class="more">
+            <a class="load-more" href="#">load more</a>
+          </div>
         </main>
 
         <section class="mailing-list">
           <h2 data-scroll="toggle(.fromBottomIn, .fromBottomOut)" class="section-header">stay updated</h2>
-          <img class="cloud-2" src="/images/cloud2.png">
+          <img class="cloud-2" src="/images/cloud5.png">
           <div class="sign-up">
             <input type="text" name="fname" id="fname" placeholder="email address">
             <a href="#" class="button">submit</a>
@@ -101,6 +102,7 @@
         	var current = parseInt(span.textContent);
 
         	span.textContent = current + 1;
+          event.preventDefault();
         };
 
         document.addEventListener('DOMContentLoaded', function(){
